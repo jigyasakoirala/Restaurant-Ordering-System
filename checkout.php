@@ -9,6 +9,7 @@ if(isset($_POST['place_order']))
     $customer_name = $_POST['customer_name'];
     $phone = $_POST['phone'];
     $table_number = $_POST['table_number'];
+    $payment_method = $_POST['payment_method'];
 
     $total_amount = 0;
 
@@ -23,8 +24,8 @@ if(isset($_POST['place_order']))
 
     $status = "Pending";
 
-    $sql = "INSERT INTO orders(customer_name, phone, table_number, total_amount, status)
-            VALUES('$customer_name','$phone','$table_number','$total_amount','$status')";
+    $sql = "INSERT INTO orders(customer_name, phone, table_number, payment_method, total_amount, status)
+        VALUES('$customer_name','$phone','$table_number','$payment_method','$total_amount','$status')";
 
     mysqli_query($conn, $sql);
 
@@ -51,11 +52,7 @@ if(isset($_POST['place_order']))
 
 unset($_SESSION['cart']);
 
-echo "<script>
-        alert('Order Placed Successfully!');
-        window.location='menu.php';
-      </script>";
-
+header("Location: order_success.php");
 exit();
 
     
@@ -84,6 +81,19 @@ exit();
            name="table_number"
            class="form-control"
            required>
+</div>
+
+     <div class="mb-3">
+    <label>Payment Method</label>
+
+    <select name="payment_method" class="form-control" required>
+        <option value="">-- Select Payment Method --</option>
+        <option value="Cash">💵 Cash</option>
+        <option value="Card">💳 Card</option>
+        <option value="eSewa">📱 eSewa</option>
+    </select>
+</div>   
+
 </div>
 </div>
 

@@ -1,0 +1,162 @@
+/* ===== Navbar ===== */
+
+.navbar{
+    background:#ffffff;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+}
+
+.navbar-brand{
+    color:#2E7D32 !important;
+}
+
+.nav-link{
+    color:#333 !important;
+    margin-left:15px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#2E7D32 !important;
+}
+
+/* ===== Hero Section ===== */
+
+.hero-section{
+    padding:80px 0;
+    background:#f8fff6;
+}
+
+.hero-img{
+    max-height:420px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.hero-img:hover{
+    transform:scale(1.03);
+}
+
+.btn-success{
+    border-radius:30px;
+    padding:12px 30px;
+}
+
+.badge{
+    padding:10px 18px;
+}
+
+/* ===== Category Cards ===== */
+
+.category-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.category-card h3{
+
+    font-size:50px;
+
+}
+
+.category-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+/* HERO SECTION */
+.hero-section{
+    background: linear-gradient(135deg,#f8fff8,#e8f5e9);
+    padding: 80px 0;
+    border-radius: 20px;
+}
+
+.hero-img{
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* CATEGORY CARDS */
+.category-card{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+}
+
+/* FEATURE BOX */
+.feature-box{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.feature-box:hover{
+    transform:translateY(-8px);
+}
+
+/* FOOD CARDS */
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGE PLACEHOLDER */
+.card-img-top{
+    background:#f1f1f1;
+}
+
+/* ==========================
+   Navbar Styling
+========================== */
+
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 12px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background: #198754;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.navbar .nav-link.active {
+    background: #198754;
+    color: white !important;
+}

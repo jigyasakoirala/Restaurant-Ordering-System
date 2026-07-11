@@ -21,6 +21,7 @@ include("../includes/header.php");
             <th>Customer</th>
             <th>Phone</th>
             <th>Table</th>
+            <th>Payment</th>
             <th>Total</th>
             <th>Status</th>
             <th>Date</th>
@@ -46,6 +47,8 @@ while($row = mysqli_fetch_assoc($result))
 
 <td><?php echo $row['table_number']; ?></td>
 
+<td><?php echo $row['payment_method']; ?></td>
+
 <td>Rs. <?php echo $row['total_amount']; ?></td>
 
 <td><?php echo $row['status']; ?></td>
@@ -53,19 +56,13 @@ while($row = mysqli_fetch_assoc($result))
 <td><?php echo $row['order_date']; ?></td>
 
 <td>
+
     <a href="update_order.php?id=<?php echo $row['order_id']; ?>"
-       class="btn btn-primary btn-sm">
-        Update Status
+       class="btn btn-success btn-sm">
+       Update Status
     </a>
-</td>
 
-<td>
-    <a href="view_order.php?id=<?php echo $row['order_id']; ?>" class="btn btn-info btn-sm">View</a>
-    <a href="edit_order.php?id=<?php echo $row['order_id']; ?>" class="btn btn-warning btn-sm">Edit</a>
-    <a href="delete_order.php?id=<?php echo $row['order_id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this order?')">Delete</a>
 </td>
-
-</tr>
 
 <?php
 }
